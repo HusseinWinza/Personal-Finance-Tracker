@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PersonalFinanceTracker</string>
+    <!--image content description-->
+    <string name="cd_splash_str">Splash Screen Logo</string>
+
+    <!--first screen-->
+    <string name="splash_description_str">Personal Finance Tracker</string>
 </resources>
