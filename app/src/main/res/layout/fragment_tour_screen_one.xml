@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSplashBackground"
+    tools:context=".TourScreenOneFragment">
+
+
+    <ImageView
+        android:id="@+id/tour_scrn_one_iv"
+        android:layout_width="307dp"
+        android:layout_height="248dp"
+        android:contentDescription="@string/cd_tour_screen_one_str"
+        android:src="@drawable/purse"
+        app:layout_constraintBottom_toTopOf="@+id/tour_skrn_one_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48000002"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tour_skrn_one_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="@string/tour_screen_one_str"
+        android:textSize="@dimen/tour_skrn_size_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/tour_scrn_one_iv" />
+</androidx.constraintlayout.widget.ConstraintLayout>
