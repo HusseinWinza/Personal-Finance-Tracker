@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="splash_description">24sp</dimen>
+    <dimen name="tour_skrn_size_tv">14sp</dimen>
 </resources>
