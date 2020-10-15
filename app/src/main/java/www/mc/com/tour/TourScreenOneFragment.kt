@@ -1,12 +1,11 @@
-package www.mc.com
+package www.mc.com.tour
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
-
+import www.mc.com.R
 
 
 class TourScreenOneFragment : Fragment() {

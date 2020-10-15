@@ -14,4 +14,6 @@
     <string name="text_home">Home</string>
     <string name="text_expense">Expense</string>
     <string name="text_report">Report</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
