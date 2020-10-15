@@ -5,32 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorSplashBackground"
-    tools:context=".tour.TourScreenOneFragment">
-
-
-    <ImageView
-        android:id="@+id/tour_scrn_one_iv"
-        android:layout_width="307dp"
-        android:layout_height="248dp"
-        android:contentDescription="@string/cd_tour_screen_one_str"
-        android:src="@drawable/purse"
-        app:layout_constraintBottom_toTopOf="@+id/tour_skrn_one_tv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48000002"
-        app:layout_constraintVertical_chainStyle="packed" />
+    tools:context=".tour.TourScreenTwoFragment">
 
     <TextView
         android:id="@+id/tour_skrn_one_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="@string/tour_screen_one_str"
+        android:text="Tour second screen"
         android:textSize="@dimen/tour_skrn_size_tv"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/tour_scrn_one_iv" />
+        app:layout_constraintTop_toTopOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
