@@ -3,11 +3,17 @@
     <!--image content description-->
     <string name="cd_splash_str">Splash Screen Logo</string>
     <string name="cd_tour_screen_one_str">Tour Screen Central Image</string>
+    <string name="cd_tour_screen_two_str">Tour Screen Central Image</string>
 
     <!--first screen-->
     <string name="splash_description_str">Personal Finance Tracker</string>
+
     <!--tour screen one-->
     <string name="tour_screen_one_str">Are you Struggling Managing Your Expenses</string>
+
+    <!--tour screen two-->
+    <string name="tour_screen_two_str">Now you can hit your target in managing your</string>
+    <string name="tour_screen_twob_str">expenses and earnings</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
