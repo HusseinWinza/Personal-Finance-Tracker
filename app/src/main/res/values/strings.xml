@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PersonalFinanceTracker</string>
+    <string name="yourEarning">Your Earning</string>
+    <string name="sortBy">Sort by</string>
+    <string name="addEarning">Add Earning</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
