@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#F4F4F4"
     android:layout_height="match_parent">
 
     <TextView
@@ -11,19 +12,23 @@
         android:layout_width="wrap_content"
         android:layout_height="41dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="@string/sortBy"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.856"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/earningLayout1"
         android:layout_width="0dp"
-        android:layout_height="114dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="32dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,14 +39,65 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15sp"
             android:text="@string/yourEarning"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_add_box_24"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="15sp"
             android:text="@string/addEarning"/>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/earningLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/earningLayout1">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:paddingStart="16dp"
+            android:paddingTop="2dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/ripple"
+            android:text="All"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:paddingStart="16dp"
+            android:paddingTop="2dp"
+            android:background="@drawable/ripple"
+            android:text="Add Earn"/>
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="2dp"
+            android:background="@drawable/ripple"
+            android:text="Manage Earning"/>
+
+        
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
