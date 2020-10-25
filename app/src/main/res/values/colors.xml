@@ -6,4 +6,5 @@
     <color name="colorSplashBackground">#E5E5E5</color>
     <color name="colorNavItemUnselected">#BABABA</color>
     <color name="white">@android:color/white</color>
+    <color name="colorText">#0C9E5F</color>
 </resources>
