@@ -9,4 +9,5 @@ package www.mc.com.utils
 object AppConstants {
     const val PREF_VALUE: String = "tour_pref"
     const val TOUR_PREF_KEY: String = "seen_tour"
+    const val RC_SIGN_IN: Int = 23
 }
