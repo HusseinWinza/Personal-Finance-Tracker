@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSplashBackground"
+    tools:context=".tour.TourScreenTwoFragment">
+
+    <ImageView
+        android:id="@+id/tour_scrn_two_iv"
+        android:layout_width="317dp"
+        android:layout_height="213dp"
+        android:src="@drawable/tourscreentwo"
+        app:layout_constraintBottom_toTopOf="@+id/tour_skrn_two_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.43"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:contentDescription="@string/cd_tour_screen_two_str"
+        />
+
+    <TextView
+        android:id="@+id/tour_skrn_two_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="@string/tour_screen_two_str"
+        android:textAlignment="center"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/tour_scrn_twob_str"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tour_scrn_two_iv"
+        />
+
+    <TextView
+        android:id="@+id/tour_scrn_twob_str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tour_screen_twob_str"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tour_skrn_two_tv" />
+</androidx.constraintlayout.widget.ConstraintLayout>
