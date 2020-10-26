@@ -26,7 +26,7 @@ class NameFragment : Fragment() {
 
     private lateinit var binding: FragmentNameBinding
     private lateinit var googleSignInClient: GoogleSignInClient
-    private val TAG = "NewFragment"
+    private val TAG = "NameFragment"
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,14 +51,9 @@ class NameFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonNext.setOnClickListener {
+        binding.buttonSignIn.setOnClickListener {
+            binding.buttonSignIn.showLoadingIndicator()
             signIn()
-            // Add to shared preference because tour screen is meant to display only once
-            val preference =
-                requireActivity().getSharedPreferences(PREF_VALUE, Context.MODE_PRIVATE)
-            val editor = preference.edit()
-            editor.putBoolean(TOUR_PREF_KEY, true)
-            editor.apply()
         }
     }
 
@@ -77,13 +72,14 @@ class NameFragment : Fragment() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithCredential:success")
-                    val user = auth.currentUser
+                    binding.buttonSignIn.hideLoadingIndicator()
+                    addValueToSharedPreference()
                     startActivity(Intent(requireContext(), MainActivity::class.java))
                     requireActivity().finish()
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithCredential:failure", task.exception)
-                    // ...
+                    binding.buttonSignIn.hideLoadingIndicator()
                     Snackbar.make(requireView(), "Authentication Failed.", Snackbar.LENGTH_LONG)
                         .show()
                 }
@@ -101,9 +97,19 @@ class NameFragment : Fragment() {
                 Log.d(TAG, "firebaseAuthWithGoogle:" + account.id)
                 firebaseAuthWithGoogle(account.idToken!!)
             } catch (e: ApiException) {
-                // Google Sign In failed, update UI appropriately
+                binding.buttonSignIn.hideLoadingIndicator()
+                Snackbar.make(requireView(), "Authentication Failed.", Snackbar.LENGTH_LONG)
+                    .show()
                 Log.d(TAG, "Google sign in failed", e)
             }
         }
+    }
+
+    private fun addValueToSharedPreference() {
+        val preference =
+            requireActivity().getSharedPreferences(PREF_VALUE, Context.MODE_PRIVATE)
+        val editor = preference.edit()
+        editor.putBoolean(TOUR_PREF_KEY, true)
+        editor.apply()
     }
 }
