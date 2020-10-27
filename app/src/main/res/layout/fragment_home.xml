@@ -6,8 +6,8 @@
     tools:context=".main.HomeFragment">
 
     <TextView
+        android:id="@+id/placeholder_text"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home Fragment" />
+        android:layout_height="match_parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

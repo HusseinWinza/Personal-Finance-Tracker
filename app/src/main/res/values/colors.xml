@@ -7,4 +7,5 @@
     <color name="colorNavItemUnselected">#BABABA</color>
     <color name="white">@android:color/white</color>
     <color name="colorText">#0C9E5F</color>
+    <color name="buttonLoadingState">#4DA580</color>
 </resources>
