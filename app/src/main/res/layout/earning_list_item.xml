@@ -24,7 +24,7 @@
             android:layout_height="100dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/ic_baseline_monetization_on_24"/>
+            android:src="@drawable/icons8_receive_cash"/>
 
             <LinearLayout
                 android:id="@+id/detailsLayout"
