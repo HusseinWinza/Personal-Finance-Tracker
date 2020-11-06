@@ -1,9 +1,11 @@
 package www.mc.com.utils
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.bumptech.glide.Glide
@@ -45,4 +47,8 @@ fun View.disable() {
 fun ImageView.loadImage(image: Any?) {
     Glide.with(this.context).load(image).circleCrop().placeholder(R.drawable.pic)
         .error(R.drawable.pic).into(this)
+}
+
+fun Context.showToast(message: String?) {
+    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 }
