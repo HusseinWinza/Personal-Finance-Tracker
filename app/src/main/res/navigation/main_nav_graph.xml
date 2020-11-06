@@ -13,16 +13,16 @@
     <fragment
         android:id="@+id/earningFragment"
         android:name="www.mc.com.main.EarningFragment"
-        android:label="Earnings"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_earning" />
     <fragment
         android:id="@+id/expenseFragment"
         android:name="www.mc.com.main.ExpenseFragment"
-        android:label="Expenses"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_expense" />
     <fragment
         android:id="@+id/reportFragment"
         android:name="www.mc.com.main.ReportFragment"
-        android:label="Report"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_report" />
 </navigation>
