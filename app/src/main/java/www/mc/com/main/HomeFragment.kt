@@ -28,7 +28,7 @@ class HomeFragment : Fragment() {
         val fullName = auth.currentUser?.displayName
         fullName?.let {
             val names: List<String> = it.split(" ") // Getting the first name
-            binding.placeholderText.text = getString(R.string.text_welcome).plus(" ${names[0]}")
+            binding.name.text = getString(R.string.text_welcome).plus(" ${names[0]},")
         }
         return binding.root
     }
