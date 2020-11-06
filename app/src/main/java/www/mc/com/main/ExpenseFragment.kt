@@ -5,15 +5,24 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import www.mc.com.R
+import www.mc.com.databinding.FragmentExpenseBinding
+import www.mc.com.utils.AutoCompleteOptions
 
 class ExpenseFragment : Fragment() {
+
+    private lateinit var binding: FragmentExpenseBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_expense, container, false)
+        binding = FragmentExpenseBinding.inflate(layoutInflater)
+        binding.addExpenseButton.setOnClickListener {
+            MainDialogFragment(AutoCompleteOptions.EXPENSES).show(
+                childFragmentManager,
+                "expense_fragment"
+            )
+        }
+        return binding.root
     }
 }
