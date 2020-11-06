@@ -3,8 +3,11 @@ package www.mc.com.utils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.bumptech.glide.Glide
+import www.mc.com.R
 
 /**
  * Created by SegunFrancis
@@ -37,4 +40,9 @@ fun View.enable() {
 fun View.disable() {
     isEnabled = false
     alpha = 0.5f
+}
+
+fun ImageView.loadImage(image: Any?) {
+    Glide.with(this.context).load(image).circleCrop().placeholder(R.drawable.pic)
+        .error(R.drawable.pic).into(this)
 }
