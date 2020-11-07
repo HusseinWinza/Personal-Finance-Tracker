@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import www.mc.com.databinding.FragmentExpenseBinding
 import www.mc.com.main.adapter.FinanceRecyclerAdapter
 import www.mc.com.utils.AutoCompleteOptions
+import www.mc.com.utils.MarginItemDecoration
 import www.mc.com.utils.Result
 import www.mc.com.utils.showToast
 
@@ -33,7 +34,6 @@ class ExpenseFragment : Fragment() {
                 "expense_fragment"
             )
         }
-        viewModel.getData(AutoCompleteOptions.EXPENSES)
         return binding.root
     }
 
@@ -43,8 +43,9 @@ class ExpenseFragment : Fragment() {
         binding.expenseRecyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = financeAdapter
+            addItemDecoration(MarginItemDecoration(32))
         }
-        viewModel.getDataResponse.observe(requireActivity(), Observer { result ->
+        viewModel.getExpenseResponse.observe(viewLifecycleOwner, Observer { result ->
             when (result) {
                 is Result.Loading -> {
 

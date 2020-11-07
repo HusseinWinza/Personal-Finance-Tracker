@@ -37,11 +37,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
                 android:fontFamily="@font/rubik"
                 android:text="What will you do today?"
-                android:textSize="18sp"
                 android:textColor="@color/white"
-                android:layout_marginBottom="8dp"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@id/name"
                 app:layout_constraintTop_toBottomOf="@id/name" />
@@ -63,50 +63,55 @@
         android:layout_width="110dp"
         android:layout_height="124dp"
         app:cardBackgroundColor="@color/grey"
-        app:contentPadding="8dp"
         app:cardCornerRadius="6dp"
-        app:layout_constraintEnd_toStartOf="@id/card2"
-        app:layout_constraintTop_toBottomOf="@id/frameLayout"
+        app:contentPadding="8dp"
         app:layout_constraintBottom_toBottomOf="@id/frameLayout"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintEnd_toStartOf="@id/card2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frameLayout">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/image"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_money"
                 android:layout_marginTop="8dp"
+                android:src="@drawable/ic_money"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/text1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total Balance"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/rubik"
+                android:text="@string/text_total_balance"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/image"
+                app:layout_constraintEnd_toEndOf="@id/image"
                 app:layout_constraintStart_toStartOf="@id/image"
-                app:layout_constraintEnd_toEndOf="@id/image" />
+                app:layout_constraintTop_toBottomOf="@id/image" />
 
             <TextView
+                android:id="@+id/text_total_balance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="$1,234"
-                android:fontFamily="@font/rubik"
-                android:textSize="18sp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:fontFamily="@font/rubik"
+                android:text="-"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/text1"
-                app:layout_constraintTop_toBottomOf="@id/text1"
                 app:layout_constraintStart_toStartOf="@id/text1"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/text1"
+                tools:text="$1,234" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -115,50 +120,55 @@
         android:layout_width="110dp"
         android:layout_height="124dp"
         app:cardBackgroundColor="@color/grey"
-        app:contentPadding="8dp"
         app:cardCornerRadius="6dp"
-        app:layout_constraintEnd_toStartOf="@id/card3"
-        app:layout_constraintTop_toBottomOf="@id/frameLayout"
+        app:contentPadding="8dp"
         app:layout_constraintBottom_toBottomOf="@id/frameLayout"
-        app:layout_constraintStart_toEndOf="@id/card1">
+        app:layout_constraintEnd_toStartOf="@id/card3"
+        app:layout_constraintStart_toEndOf="@id/card1"
+        app:layout_constraintTop_toBottomOf="@id/frameLayout">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/image2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_receive_cash"
                 android:layout_marginTop="8dp"
+                android:src="@drawable/ic_receive_cash"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/text2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Earned"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/rubik"
+                android:text="@string/text_earned"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/image2"
+                app:layout_constraintEnd_toEndOf="@id/image2"
                 app:layout_constraintStart_toStartOf="@id/image2"
-                app:layout_constraintEnd_toEndOf="@id/image2" />
+                app:layout_constraintTop_toBottomOf="@id/image2" />
 
             <TextView
+                android:id="@+id/text_earned"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="$1,234"
-                android:fontFamily="@font/rubik"
-                android:textSize="18sp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:fontFamily="@font/rubik"
+                android:text="-"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/text2"
-                app:layout_constraintTop_toBottomOf="@id/text2"
                 app:layout_constraintStart_toStartOf="@id/text2"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/text2"
+                tools:text="$1,234" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -167,50 +177,55 @@
         android:layout_width="110dp"
         android:layout_height="124dp"
         app:cardBackgroundColor="@color/grey"
-        app:contentPadding="8dp"
         app:cardCornerRadius="6dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/frameLayout"
+        app:contentPadding="8dp"
         app:layout_constraintBottom_toBottomOf="@id/frameLayout"
-        app:layout_constraintStart_toEndOf="@id/card2">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/card2"
+        app:layout_constraintTop_toBottomOf="@id/frameLayout">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/image3"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_card_payment"
                 android:layout_marginTop="8dp"
+                android:src="@drawable/ic_card_payment"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/text3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Spent"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/rubik"
+                android:text="@string/text_spent"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/image3"
+                app:layout_constraintEnd_toEndOf="@id/image3"
                 app:layout_constraintStart_toStartOf="@id/image3"
-                app:layout_constraintEnd_toEndOf="@id/image3" />
+                app:layout_constraintTop_toBottomOf="@id/image3" />
 
             <TextView
+                android:id="@+id/text_spent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="$1,234"
-                android:fontFamily="@font/rubik"
-                android:textSize="18sp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:fontFamily="@font/rubik"
+                android:text="-"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/text3"
-                app:layout_constraintTop_toBottomOf="@id/text3"
                 app:layout_constraintStart_toStartOf="@id/text3"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/text3"
+                tools:text="$1,234" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -218,17 +233,18 @@
         android:id="@+id/transaction_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recent Transactions"
-        android:fontFamily="@font/rubik"
-        android:textColor="@android:color/black"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:textStyle="bold"
+        android:fontFamily="@font/rubik"
+        android:text="@string/text_recent_transactions"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/card1"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card1" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recent_recycler_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"

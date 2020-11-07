@@ -52,3 +52,11 @@ fun ImageView.loadImage(image: Any?) {
 fun Context.showToast(message: String?) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 }
+
+fun <T> concatenate(vararg lists: List<T?>?): List<T?>? {
+    val result: MutableList<T?> = ArrayList()
+    for (list in lists) {
+        result.addAll(list!!)
+    }
+    return result
+}
