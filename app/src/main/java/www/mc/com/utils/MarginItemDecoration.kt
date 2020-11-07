@@ -23,7 +23,7 @@ class MarginItemDecoration(
             val itemCount = state.itemCount
             val itemPosition = parent.getChildAdapterPosition(view)
             if (itemCount > 0 && itemPosition == itemCount - 1) {
-                top = bottomMargin
+                bottom = bottomMargin
             }
         }
     }

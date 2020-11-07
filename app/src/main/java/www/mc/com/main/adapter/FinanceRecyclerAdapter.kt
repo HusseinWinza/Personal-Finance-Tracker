@@ -9,6 +9,8 @@ import www.mc.com.R
 import www.mc.com.databinding.ItemRecyclerViewBinding
 import www.mc.com.main.model.Finance
 import www.mc.com.utils.loadImage
+import java.text.SimpleDateFormat
+import java.util.*
 
 /**
  * Created by SegunFrancis
@@ -36,7 +38,9 @@ class FinanceRecyclerAdapter :
             titleTextView.text = item.title
             costTextView.text = "$".plus(item.amount.toString())
             subTitleTextView.text = item.details ?: ""
-            dateTextView.text = item.dataAdded.toString()
+            val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+            val date = sdf.format(item.dataAdded)
+            dateTextView.text = date
             if (item.category == "Salary" || item.category == "Business" || item.category == "Others") {
                 earningImage.loadImage(R.drawable.ic_receive_cash)
             } else {

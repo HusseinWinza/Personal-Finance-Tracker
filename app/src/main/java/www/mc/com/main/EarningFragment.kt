@@ -43,7 +43,7 @@ class EarningFragment : Fragment() {
         binding.earningRecyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = financeAdapter
-            addItemDecoration(MarginItemDecoration(32))
+            addItemDecoration(MarginItemDecoration(130))
         }
         viewModel.getEarningResponse.observe(requireActivity(), Observer { result ->
             when (result) {

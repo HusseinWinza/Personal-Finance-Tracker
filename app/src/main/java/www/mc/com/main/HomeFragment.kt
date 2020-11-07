@@ -52,7 +52,7 @@ class HomeFragment : Fragment() {
         binding.recentRecyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = recentAdapter
-            addItemDecoration(MarginItemDecoration(32))
+            addItemDecoration(MarginItemDecoration(130))
         }
 
         viewModel.earned.observe(viewLifecycleOwner, Observer { result ->

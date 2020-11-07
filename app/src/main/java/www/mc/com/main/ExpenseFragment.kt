@@ -43,7 +43,7 @@ class ExpenseFragment : Fragment() {
         binding.expenseRecyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = financeAdapter
-            addItemDecoration(MarginItemDecoration(32))
+            addItemDecoration(MarginItemDecoration(130))
         }
         viewModel.getExpenseResponse.observe(viewLifecycleOwner, Observer { result ->
             when (result) {
