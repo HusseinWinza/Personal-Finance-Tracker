@@ -8,5 +8,8 @@ data class Finance(
     val title: String,
     val category: String,
     val amount: Double,
-    val details: String?
-)
+    val details: String?,
+    val dataAdded: Long
+) {
+    constructor() : this("", "", 0.0, "", 0)
+}

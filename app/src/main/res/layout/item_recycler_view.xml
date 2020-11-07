@@ -1,94 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="#DEE4E4"
+    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialCardView.Cut">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="#DEE4E4"
-        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialCardView.Cut">
+        android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/earningImage"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/desc_profile_photo"
+            android:src="@drawable/ic_receive_cash"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/rubik"
+            android:maxLines="1"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/costTextView"
+            app:layout_constraintStart_toEndOf="@id/earningImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Salary" />
 
-            <ImageView
-                android:id="@+id/earningImage"
-                android:layout_width="50dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                tools:src="@drawable/ic_receive_cash" />
+        <TextView
+            android:id="@+id/subTitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginBottom="16dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/rubik"
+            android:maxLines="2"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/dateTextView"
+            app:layout_constraintStart_toEndOf="@id/earningImage"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView"
+            tools:text="Got new shirts and shorts" />
 
-            <LinearLayout
-                android:id="@+id/detailsLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/earningImage"
-                android:orientation="vertical"
-                android:padding="16dp">
+        <TextView
+            android:id="@+id/costTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/rubik"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/titleTextView"
+            tools:text="+$750" />
 
-                <TextView
-                    android:id="@+id/titleTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/rubik"
-                    android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="#000000"
-                    android:textStyle="bold"
-                    tools:text="Salary" />
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/rubik"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="2020-12-7" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <TextView
-                    android:id="@+id/subTitleTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/rubik"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#000000"
-                    tools:text="Got new shirts and shorts" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/otherDetailsLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/detailsLayout"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:id="@+id/costTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/rubik"
-                    android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="#000000"
-                    android:textStyle="bold"
-                    tools:text="+$750" />
-
-                <TextView
-                    android:id="@+id/dateTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/rubik"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#000000"
-                    tools:text="2020-12-7" />
-
-            </LinearLayout>
-
-        </RelativeLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-</FrameLayout>
+</com.google.android.material.card.MaterialCardView>
